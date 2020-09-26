@@ -1,2 +1,15 @@
-//Tuple型~決められた配列の型
-const bopok: [string, number, boolean] = ["魔法のコンパス", 2800, false];
+//enum型~特定のまとまったグループを受け入れる型
+
+//enumで定義
+enum CoffeeSize {
+  SHORT, //0
+  TALL, //1
+  GRADE, //2
+  VENTI, //3
+}
+
+//sizeに4つしか選ばせない
+const coffee = {
+  hot: true,
+  size: CoffeeSize.TALL,
+};
