@@ -1,0 +1,91 @@
+{
+  "compilerOptions": {
+    /* Visit https://aka.ms/tsconfig.json to read more about this file */
+
+    /* Basic Options */
+    // "incremental": true,                   /* Enable incremental compilation */
+    "target": "es5",
+    /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'. */
+    "module": "commonjs",
+    /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */
+    // "lib": [],                             /**/
+    // "allowJs": true,                       /* jsをコンパイラの対象にする */
+    // "checkJs": true,                       /* jsファイルもtsみたいにエラーチェックをする(上と一緒に使う) */
+    // "jsx": "preserve",                     /* React.JSのために使うやつ */
+    // "declaration": true,                   /* すべてが纏った型定義ファイルが作られる(ドキュメントができる) */
+    // "declarationMap": true,                /* 上とセット */
+    // "sourceMap": true,                     /* tsとjsの架け橋みたいなファイル(ブラウザがTSを理解するため) */
+    // "outFile": "./",                       /**/
+    // "outDir": "./dist",                    /* tsからjsにするときに出力先を指定できる */
+    // "rootDir": "./",                       /**/
+    // "composite": true,                     /**/
+    // "tsBuildInfoFile": "./",               /**/
+    // "removeComments": true,                /**/
+    // "noEmit": true,                        /* TSの型チェックだけして何みしない*/
+    // "noEmitOnError": true,                 /* エラーの時コンパイルしない*/
+    // "importHelpers": true,                 /**/
+    // "downlevelIteration": true,            /* targetがES3,ES5のときだけ使える*/
+    // "isolatedModules": true,               /**/
+
+    /* Strict Type-Checking Options */
+    "strict": true,
+    /* trueにすると下7個実行される */
+    /* Enable all strict type-checking options. */
+    // "noImplicitAny": true,                 /* 暗黙的な的anyはやめようエラー表示 */
+    // "strictNullChecks": true,              /**/
+    // "strictFunctionTypes": true,           /**/
+    // "strictBindCallApply": true,           /**/
+    // "strictPropertyInitialization": true,  /**/
+    // "noImplicitThis": true,                /**/
+    // "alwaysStrict": true,                  /**/
+
+    /* Additional Checks */
+    // "noUnusedLocals": true,                /* 使ってない変数があると警告が出る */
+    // "noUnusedParameters": true,            /* 使ってないパラメーターがあると警告が出る */
+    // "noImplicitReturns": true,             /* 使ってないreturnがあると警告が出る */
+    // "noFallthroughCasesInSwitch": true,    /**/
+
+    /* Module Resolution Options (今はスキップ)*/
+    // "moduleResolution": "node",            /**/
+    // "baseUrl": "./",                       /**/
+    // "paths": {},                           /**/
+    // "rootDirs": [],                        /**/
+    // "typeRoots": [],                       /**/
+    // "types": [],                           /**/
+    // "allowSyntheticDefaultImports": true,  /**/
+    "esModuleInterop": true,
+    /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
+    // "preserveSymlinks": true,              /**/
+    // "allowUmdGlobalAccess": true,          /**/
+
+    /* Source Map Options */
+    // "sourceRoot": "",                      /**/
+    // "mapRoot": "",                         /**/
+    // "inlineSourceMap": true,               /**/
+    // "inlineSources": true,                 /**/
+
+    /* Experimental Options */
+    // "experimentalDecorators": true,        /**/
+    // "emitDecoratorMetadata": true,         /**/
+
+    /* Advanced Options */
+    "skipLibCheck": true,
+    /* Skip type checking of declaration files. */
+    "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */
+  },
+
+  //[追記]
+
+
+  //-------------------------
+  //コンパイラしないファイルを設定
+  //-------------------------
+  /*  tmp/compiler.ts-ファイル指定する
+   *　どこのパスでも反映したい時はアスタリスク2個
+   */
+  // "exclude": [
+  //   "**/compiler.ts", //このファイルをコンパイラしない(全て)
+  //   "*.spec.ts", //specのつくファイルをコンパイラしない,
+  //   "node_modules", //基本これは書く 
+  //]
+}
