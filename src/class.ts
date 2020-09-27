@@ -8,17 +8,31 @@ class Person {
     return console.log(`Hello My name is ${this.name}:${this.age}`);
   }
 }
-
 const quill = new Person("Quill", 30);
 quill.greeting();
 
-//---継承---
-//もし継承先でconstructorの引数を足したい時はsuperを用いる(subject)
-//①constructerの引数に型宣言
-//②superに継承元の引数を記入
+//------------------------------------
 
 class Teacher extends Person {
-  constructor(name: string, age: number, public subject: string) {
+  //取得したときに何かの関数を実行
+  get subject() {
+    //subjectがないとき
+    if (!this._subject) {
+      throw new Error("ERROR");
+    }
+    return this._subject;
+  }
+
+  //値を代入,変更したときに実行
+  set subject(value) {
+    //subjectがないとき
+    if (!value) {
+      throw new Error("ERROR");
+    }
+    this._subject = value;
+  }
+
+  constructor(name: string, age: number, private _subject: string) {
     super(name, age);
   }
   greeting() {
@@ -30,4 +44,7 @@ class Teacher extends Person {
 
 //subjectがたされてる
 const teacher = new Teacher("qiill", 20, "Math");
+teacher.subject = "aaa";
+console.log(teacher.subject);
+
 teacher.greeting();
