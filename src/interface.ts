@@ -4,10 +4,12 @@ interface Human {
   greeting(message: string): void;
 }
 
-const human: Human = {
-  name: "muchan",
-  age: 22,
-  greeting(message: string) {
-    console.log(message);
-  },
-};
+//classにinterfaceのオブジェクトを定義するやり方
+
+class Developer implements Human {
+  constructor(public name: string, public age: number) {}
+  //コンストラクタ外
+  greeting(message: String) {
+    console.log("Hello");
+  }
+}
